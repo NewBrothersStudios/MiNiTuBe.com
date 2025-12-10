@@ -8,16 +8,14 @@
 </head>
 <body>
 
-<!-- AVISO GENERAL SEGURO -->
+<!-- AVISO -->
 <div id="aviso" class="aviso-container">
   <div class="aviso-box">
     <h2>Aviso Importante</h2>
     <p>
-      Este sitio puede mostrar contenido enviado por usuarios.  
-      No nos hacemos responsables por material inapropiado o inesperado que pueda aparecer.  
-      Si eres sensible a ciertos temas, te recomendamos salir.
+      Este sitio muestra contenido enviado por usuarios.
+      No nos hacemos responsables por material inapropiado o inesperado.
     </p>
-
     <div class="aviso-btns">
       <button class="ok" onclick="cerrarAviso()">Continuar</button>
       <button class="no" onclick="salirPagina()">Salir</button>
@@ -25,14 +23,11 @@
   </div>
 </div>
 
-<!-- HEADER -->
 <header>
   <h1><span class="mini">MINI</span><span class="tube">TUBE</span></h1>
-
-  <input type="text" id="buscador" placeholder="Buscar videos..." oninput="buscarVideos()">
+  <input type="text" id="buscador" placeholder="Buscar..." oninput="buscarVideos()">
 </header>
 
-<!-- CONTENEDOR PRINCIPAL -->
 <div id="videosContainer" class="videos"></div>
 
 <script src="scripts.js"></script>
