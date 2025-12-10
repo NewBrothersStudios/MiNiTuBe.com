@@ -1,25 +1,25 @@
  const videos = [
   {
     titulo: "METAMORPHOSIS",
-    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/METAMORPHOSIS(360P).mp4"
-  }
-];
-titulo: "STIKTOK",
-    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/ssstik.io_@supery084_1760750295491%20(1)%20(1).mp4"
+    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/METAMORPHOSIS_360P.mp4"
+  },
+  {
+    titulo: "STIKTOK",
+    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/ssstik.io_@supery084_1760750295491_1_1.mp4"
   }
 ];
 
 const lista = document.getElementById("video-list");
-const titulo = document.getElementById("video-title");
+const tituloVideo = document.getElementById("video-title");
 const player = document.getElementById("video-player");
 
-videos.forEach((video, index) => {
+videos.forEach((video) => {
   const item = document.createElement("div");
   item.className = "video-item";
   item.textContent = video.titulo;
 
   item.onclick = () => {
-    titulo.textContent = video.titulo;
+    tituloVideo.textContent = video.titulo;
     player.src = video.archivo;
     player.play();
   };
