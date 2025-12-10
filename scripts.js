@@ -9,7 +9,7 @@ function salirPagina(){
 
 // LISTA DE VIDEOS (20 ESPACIOS)
 const videos = [
-  { titulo: "Video 1", archivo: "" },
+  { titulo: "METAMORPHOSIS", archivo: "https://raw.githubusercontent.com/newbrothersstudios/GetBrainrotsFree/main/videos/METAMORPHOSIS(360P).mp4" },
   { titulo: "Video 2", archivo: "" },
   { titulo: "Video 3", archivo: "" },
   { titulo: "Video 4", archivo: "" },
