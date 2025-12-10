@@ -7,38 +7,24 @@ function salirPagina(){
   window.location.href = "https://google.com";
 }
 
-// LISTA DE VIDEOS (20 ESPACIOS)
+// LISTA DE VIDEOS (puedes poner hasta 20)
 const videos = [
-  { titulo: "METAMORPHOSIS", archivo: "https://raw.githubusercontent.com/newbrothersstudios/GetBrainrotsFree/main/videos/METAMORPHOSIS(360P).mp4" },
-  { titulo: "Video 2", archivo: "" },
-  { titulo: "Video 3", archivo: "" },
-  { titulo: "Video 4", archivo: "" },
-  { titulo: "Video 5", archivo: "" },
-  { titulo: "Video 6", archivo: "" },
-  { titulo: "Video 7", archivo: "" },
-  { titulo: "Video 8", archivo: "" },
-  { titulo: "Video 9", archivo: "" },
-  { titulo: "Video 10", archivo: "" },
-  { titulo: "Video 11", archivo: "" },
-  { titulo: "Video 12", archivo: "" },
-  { titulo: "Video 13", archivo: "" },
-  { titulo: "Video 14", archivo: "" },
-  { titulo: "Video 15", archivo: "" },
-  { titulo: "Video 16", archivo: "" },
-  { titulo: "Video 17", archivo: "" },
-  { titulo: "Video 18", archivo: "" },
-  { titulo: "Video 19", archivo: "" },
-  { titulo: "Video 20", archivo: "" }
+  {
+    titulo: "METAMORPHOSIS 360p",
+    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/METAMORPHOSIS(360P).mp4"
+  },
+
+  // AGREGÁ TUS OTROS VIDEOS AQUÍ ABAJO
+  // { titulo: "Video 2", archivo: "LINK RAW" },
+  // { titulo: "Video 3", archivo: "LINK RAW" },
 ];
 
-// Renderizador
+// RENDER
 function cargarVideos(lista){
   const cont = document.getElementById("videosContainer");
   cont.innerHTML = "";
 
   lista.forEach(v => {
-    if (!v.archivo) return;
-
     cont.innerHTML += `
       <div class="video-card">
         <video controls>
