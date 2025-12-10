@@ -1,64 +1,28 @@
-// ELEMENTOS PRINCIPALES
-const player = document.getElementById('player');
-const playPauseBtn = document.getElementById('playPause');
-const rewindBtn = document.getElementById('rewind');
-const forwardBtn = document.getElementById('forward');
-const speedBtn = document.getElementById('speed');
-const fullscreenBtn = document.getElementById('fullscreen');
-const progressBar = document.getElementById('progressBar');
-const progress = document.getElementById('progress');
+ const videos = [
+  {
+    titulo: "METAMORPHOSIS",
+    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/METAMORPHOSIS(360P).mp4"
+  }
+];
+titulo: "STIKTOK",
+    archivo: "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/ssstik.io_@supery084_1760750295491%20(1)%20(1).mp4"
+  }
+];
 
-let speed = 1;
+const lista = document.getElementById("video-list");
+const titulo = document.getElementById("video-title");
+const player = document.getElementById("video-player");
 
-// CARGAR VIDEO PRINCIPAL
-player.src = "https://github.com/NewBrothersStudios/MiNiTuBe.com/raw/refs/heads/main/videos/METAMORPHOSIS_360P.mp4";
-player.load();
+videos.forEach((video, index) => {
+  const item = document.createElement("div");
+  item.className = "video-item";
+  item.textContent = video.titulo;
 
-// PLAY / PAUSE
-playPauseBtn.addEventListener('click', () => {
-  if (player.paused) {
+  item.onclick = () => {
+    titulo.textContent = video.titulo;
+    player.src = video.archivo;
     player.play();
-    playPauseBtn.textContent = "⏸️";
-  } else {
-    player.pause();
-    playPauseBtn.textContent = "▶️";
-  }
-});
+  };
 
-// REWIND 10s
-rewindBtn.addEventListener('click', () => {
-  player.currentTime -= 10;
-});
-
-// FORWARD 10s
-forwardBtn.addEventListener('click', () => {
-  player.currentTime += 10;
-});
-
-// SPEED TOGGLE
-speedBtn.addEventListener('click', () => {
-  speed = speed === 1 ? 2 : 1;
-  player.playbackRate = speed;
-  speedBtn.textContent = `×${speed}`;
-});
-
-// FULLSCREEN
-fullscreenBtn.addEventListener('click', () => {
-  if (!document.fullscreenElement) {
-    player.requestFullscreen();
-  } else {
-    document.exitFullscreen();
-  }
-});
-
-// PROGRESS BAR
-player.addEventListener('timeupdate', () => {
-  const percent = (player.currentTime / player.duration) * 100;
-  progress.style.width = percent + "%";
-});
-progressBar.addEventListener('click', (e) => {
-  const rect = progressBar.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-  const percent = x / rect.width;
-  player.currentTime = percent * player.duration;
+  lista.appendChild(item);
 });
