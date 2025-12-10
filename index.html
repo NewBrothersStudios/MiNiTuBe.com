@@ -3,82 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MINITUBE</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Audiowide&display=swap" rel="stylesheet">
+  <title>MiniTube</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- HEADER -->
-<header>
-  <div class="logo">MINITUBE</div>
-  <div class="search-bar">
-    <input type="text" placeholder="Buscar videos...">
-    <button>🔍</button>
-  </div>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#">Tendencias</a>
-    <a href="#">Suscripciones</a>
-    <a href="#">Biblioteca</a>
-    <a href="#">Historial</a>
-  </nav>
-</header>
+  <header>
+    <h1>MiniTube</h1>
+  </header>
 
-<!-- SIDEBAR -->
-<div class="sidebar">
-  <a href="#"><i>🏠</i>Inicio</a>
-  <a href="#"><i>🔥</i>Tendencias</a>
-  <a href="#"><i>📺</i>Suscripciones</a>
-  <a href="#"><i>🎮</i>Gaming</a>
-  <a href="#"><i>🎵</i>Música</a>
-</div>
+  <main>
+    <div id="video-list"></div>
 
-<!-- MAIN CONTENT -->
-<div class="main-content">
-
-  <!-- VIDEO PLAYER -->
-  <div class="video-player">
-    <video id="player" poster="https://placeimg.com/900/500/any"></video>
-    <div class="controls" id="controls">
-      <button id="playPause">▶️</button>
-      <button id="rewind">⏪ 10s</button>
-      <button id="forward">10s ⏩</button>
-      <button id="speed">×1</button>
-      <button id="fullscreen">⛶</button>
-      <div class="progress-bar" id="progressBar">
-        <div class="progress" id="progress"></div>
-      </div>
+    <div id="player">
+      <h2 id="video-title">Selecciona un video</h2>
+      <video id="video-player" controls></video>
     </div>
-  </div>
+  </main>
 
-  <!-- VIDEO GRID -->
-  <div class="video-grid">
-    <div class="video-card" data-duration="0:30">
-      <img src="https://placeimg.com/320/180/any" data-original="https://placeimg.com/320/180/any" alt="Video 1">
-      <div class="video-info">
-        <h3>Video de Prueba 1</h3>
-        <p>1.2M vistas • Hace 2 días</p>
-      </div>
-    </div>
-    <div class="video-card" data-duration="0:45">
-      <img src="https://placeimg.com/320/180/any?2" data-original="https://placeimg.com/320/180/any?2" alt="Video 2">
-      <div class="video-info">
-        <h3>Video de Prueba 2</h3>
-        <p>500K vistas • Hace 1 semana</p>
-      </div>
-    </div>
-    <div class="video-card" data-duration="1:15">
-      <img src="https://placeimg.com/320/180/any?3" data-original="https://placeimg.com/320/180/any?3" alt="Video 3">
-      <div class="video-info">
-        <h3>Video de Prueba 3</h3>
-        <p>2.3M vistas • Hace 3 días</p>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
